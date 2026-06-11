@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          allow-prereleases: true
+
+      - name: Install
+        run: pip install -e ".[demo,dev]"
+
+      - name: Generate synthetic fleet
+        run: python data/synthetic/generate_fleet.py
+
+      - name: Eval gate (GLPC fit + optimization accuracy)
+        run: python evals/optimization_accuracy.py
+
+      - name: Pytest
+        run: pytest -q

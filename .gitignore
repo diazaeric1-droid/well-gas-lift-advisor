@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+*.egg
+.pytest_cache/
+.ruff_cache/
+.env
+*.pyc
+
+# generated data (re-run generate_fleet.py to restore)
+data/synthetic/fleet/
+data/synthetic/ground_truth.csv
+
+# evals output
+evals/optimization_report.json
