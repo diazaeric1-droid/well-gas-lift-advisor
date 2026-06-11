@@ -381,10 +381,10 @@ CITATIONS = {
     "survival": "Run-life / remaining-useful-life from survival (time-to-event) analysis. "
                 "Foundational: Kaplan & Meier (1958), JASA 53; Cox (1972), J. R. Stat. Soc. B.",
     "gas_lift": "Gas-lift performance curve (GLPC) and injection optimization. Model: "
-               "q_liq = q_sl + (q_max−q_sl)·(1−exp(−a·Qinj)); optimum from dNet/dQinj=0. "
-               "Brown, K.E. (1984), "The Technology of Artificial Lift Methods," Vol. 4; "
-               "Takács, G. (2005), "Gas Lift Manual," PennWell; "
-               "Golan & Whitson (1991), "Well Performance," 2nd ed.",
+                "q_liq = q_sl + (q_max−q_sl)·(1−exp(−a·Qinj)); optimum from dNet/dQinj=0. "
+                "Brown, K.E. (1984), “The Technology of Artificial Lift Methods,” Vol. 4; "
+                "Takács, G. (2005), “Gas Lift Manual,” PennWell; "
+                "Golan & Whitson (1991), “Well Performance,” 2nd ed.",
     "pareto": "Loss attribution ranked by the Pareto principle (the vital-few causes that "
               "drive most deferred volume); cause split via a deterministic keyword classifier.",
     "deferment": "Deferment = well potential − actual. Potential is modeled from the well’s "

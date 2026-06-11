@@ -19,9 +19,13 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-# --- path bootstrap: app.py is in demo/, src/ is in the parent ---------------
-ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
+# --- path bootstrap: repo root for `src.*`, demo dir for vendored theme/registry
+# (Streamlit adds the entrypoint dir at runtime; AppTest / other contexts may not).
+DEMO_DIR = Path(__file__).resolve().parent
+ROOT = DEMO_DIR.parent
+for _p in (str(ROOT), str(DEMO_DIR)):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
 import theme
 import fleet_registry
